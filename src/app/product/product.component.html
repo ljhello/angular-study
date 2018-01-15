@@ -3,7 +3,7 @@
     <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=422488542,3125156157&fm=27&gp=0.jpg" alt="">
     <div class="caption">
       <h4 class="pull-right">{{product.price}}元</h4>
-      <h4><a href="javascript:;">{{product.title}}</a></h4>
+      <h4><a href="javascript:;" [routerLink]="['/product',product.title]">{{product.title}}</a></h4>
        <p>{{product.desc}}</p>
     </div>
      <div>
