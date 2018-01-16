@@ -1,3 +1,27 @@
-<div>
-  <h4>{{productTitle}}</h4>
+<div class="thumbnail">
+  <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=422488542,3125156157&fm=27&gp=0.jpg" alt="">
+  <div>
+    <h4 class="pull-right">{{product.price}}元</h4>
+    <h4>{{product.title}}</h4>
+    <p>{{product.desc}}</p>
+  </div>
+  <div>
+    <p class="pull-right">
+      {{comments.length}}
+    </p>
+    <p>
+      <app-stars [rating]="product.rating"></app-stars>
+    </p>
+  </div>
+</div>
+<div class="well">
+   <div class="row" *ngFor="let comment of comments">
+     <hr>
+     <div class="col-md-12">
+        <app-stars [rating]="comment.rating"></app-stars>
+        <p>{{comment.content}}</p>
+        <span>{{comment.user}}</span>
+        <span class="pull-right">{{comment.timestamp}}</span>
+     </div>
+   </div>
 </div>
