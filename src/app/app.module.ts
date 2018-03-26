@@ -13,14 +13,16 @@ import { StarsComponent } from './stars/stars.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './shared/product.service';
-import { FilterPipe } from './pipe/filter.pipe'
+import { FilterPipe } from './pipe/filter.pipe';
+import { ReactiveRegisteComponent } from './reactive-registe/reactive-registe.component'
 
 
 
 
 const routeConfig: Routes = [
   {path:'',component:HomeComponent},
-  {path:'product/:prodId',component:ProductDetailComponent}
+  {path:'product/:prodId',component:ProductDetailComponent},
+  {path:"register",component:ReactiveRegisteComponent}
 ]
 
 @NgModule({
@@ -34,7 +36,8 @@ const routeConfig: Routes = [
     StarsComponent,
     ProductDetailComponent,
     HomeComponent,
-    FilterPipe
+    FilterPipe,
+    ReactiveRegisteComponent
   ],
   imports: [
     BrowserModule,
